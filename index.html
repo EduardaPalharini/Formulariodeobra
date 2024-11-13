@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Obra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 15px;
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .radio-group input[type="radio"], .checkbox-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .input-text {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .people-group {
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        .people-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .people-row label {
+            flex: 1;
+            font-weight: normal;
+        }
+        .time-input {
+            width: 80px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 0 5px;
+        }
+        .button-submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button-submit:hover {
+            background-color: #218838;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 15px;
+            }
+            .input-text {
+                padding: 10px;
+                font-size: 14px;
+            }
+            .time-input {
+                width: 70px;
+                padding: 4px;
+            }
+            .button-submit {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 10px;
+            }
+            .input-text {
+                padding: 12px;
+                font-size: 16px;
+            }
+            .time-input {
+                width: 60px;
+                padding: 4px;
+            }
+            .button-submit {
+                padding: 14px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Formulário de Obra</h2>
+        <form action="mailto:eduardapalharini45@gmail.com" method="POST" enctype="multipart/form-data">
+
+            <!-- Obras -->
+            <div class="form-group">
+                <label>Obras:</label>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="obra" value="Adimar" required> Adimar</label>
+                    <label><input type="radio" name="obra" value="Sicredi" required> Sicredi</label>
+                    <label><input type="radio" name="obra" value="Carmem" required> Sementes Guará</label>
+                    <label><input type="radio" name="obra" value="Bernardo" required> Bernardo</label>
+                    <label><input type="radio" name="obra" value="Sérgio" required> Sérgio</label>
+                    <label><input type="radio" name="obra" value="Reges" required> Reges</label>
+                    <label><input type="radio" name="obra" value="Carol" required> Carol</label>
+                    <label><input type="radio" name="obra" value="Marli" required> Marli</label>
+                </div>
+            </div>
+
+            <!-- Clima -->
+            <div class="form-group">
+                <label>Clima:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="clima" value="Ensolarado" required> Ensolarado</label>
+                    <label><input type="radio" name="clima" value="Nublado" required> Nublado</label>
+                    <label><input type="radio" name="clima" value="Chuvoso" required> Chuvoso</label>
+                </div>
+            </div>
+
+            <!-- Atividades Feitas -->
+            <div class="form-group">
+                <label for="atividades">Atividades feitas:</label>
+                <textarea id="atividades" name="atividades" class="input-text" rows="4" required></textarea>
+            </div>
+
+            <!-- Pessoas Presentes -->
+            <div class="form-group">
+                <label>Quem estava presente?</label>
+                <div class="people-group">
+                    <div class="people-row">
+                        <label>Gean</label>
+                        <input type="time" name="Gean_inicio" class="time-input" required>
+                        <input type="time" name="Gean_fim" class="time-input" required>
+                    </div>
+                    <div class="people-row">
+                        <label>Jocemar</label>
+                        <input type="time" name="Jocemar_inicio" class="time-input" required>
+                        <input type="time" name="Jocemar_fim" class="time-input" required>
+                    </div>
+                    <div class="people-row">
+                        <label>Natanael</label>
+                        <input type="time" name="Natanael_inicio" class="time-input" required>
+                        <input type="time" name="Natanael_fim" class="time-input" required>
+                    </div>
+                    <div class="people-row">
+                        <label>Pablo</label>
+                        <input type="time" name="Pablo_inicio" class="time-input" required>
+                        <input type="time" name="Pablo_fim" class="time-input" required>
+                    </div>
+                    <div class="people-row">
+                        <label>Alex</label>
+                        <input type="time" name="Alex_inicio" class="time-input" required>
+                        <input type="time" name="Alex_fim" class="time-input" required>
+                    </div>
+                    <div class="people-row">
+                        <label>Júnior</label>
+                        <input type="time" name="Junior_inicio" class="time-input" required>
+                        <input type="time" name="Junior_fim" class="time-input" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ocorrências -->
+            <div class="form-group">
+                <label for="ocorrencias">Ocorrências:</label>
+                <textarea id="ocorrencias" name="ocorrencias" class="input-text" rows="4" required></textarea>
+            </div>
+
+            <!-- Acidentes -->
+            <div class="form-group">
+                <label>Acidentes:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="acidente" value="Sim" required onclick="document.getElementById('descricao-acidente').style.display='block'"> Sim</label>
+                    <label><input type="radio" name="acidente" value="Não" required onclick="document.getElementById('descricao-acidente').style.display='none'"> Não</label>
+                </div>
+                <textarea id="descricao-acidente" name="descricao_acidente" class="input-text" rows="4" style="display: none;" placeholder="Descreva o acidente"></textarea>
+            </div>
+
+            <!-- Upload de Imagens -->
+            <div class="form-group">
+                <label for="imagens">Envie imagens da obra:</label>
+                <input type="file" id="imagens" name="imagens[]" accept="image/*" multiple>
+            </div>
+
+            <!-- Botão Enviar -->
+            <button type="submit" class="button-submit">Enviar</button>
